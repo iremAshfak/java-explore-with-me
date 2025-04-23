@@ -31,7 +31,7 @@ services:
       - "8080:8080"
     depends_on:
       - main-service-db
-      - stats-server
+      - stat-server
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://main-service-db:5432/main-service-db
       - SPRING_DATASOURCE_USERNAME=user
