@@ -20,7 +20,7 @@
         </dependency>
 
         <dependency>
-            <groupId>ru.practicum.ewm.dto.stats</groupId>
+            <groupId>ru.practicum.ewm.dto.stat</groupId>
             <artifactId>stat-dto</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
