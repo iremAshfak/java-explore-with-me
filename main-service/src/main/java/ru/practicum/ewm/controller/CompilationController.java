@@ -58,6 +58,5 @@ public class CompilationController {
     @DeleteMapping(ADMIN_URI + COMPILATIONS_URI + COMPILATIONS_ID_PARAM)
     public void deleteCompilationById(@PathVariable long compId) {
         service.deleteCompilationById(compId);
-
     }
 }
