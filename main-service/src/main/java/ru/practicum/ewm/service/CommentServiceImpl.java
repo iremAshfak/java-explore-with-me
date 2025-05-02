@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import ru.practicum.ewm.dto.create.CommentCreateDto;
-import ru.practicum.ewm.dto.response.CommentResponseDto;
 import ru.practicum.ewm.dto.update.CommentUpdateDto;
 import ru.practicum.ewm.entity.Comment;
 import ru.practicum.ewm.entity.Event;
@@ -13,7 +12,6 @@ import ru.practicum.ewm.exception.NotFoundException;
 import ru.practicum.ewm.mapper.CommentMapper;
 import ru.practicum.ewm.repository.CommentRepository;
 
-import java.nio.file.AccessDeniedException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
