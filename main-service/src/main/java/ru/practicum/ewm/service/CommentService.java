@@ -11,7 +11,7 @@ public interface CommentService {
 
     Comment patchCommentByUser(long userId, long commentId, CommentUpdateDto updateDto);
 
-    ru.practicum.ewm.entity.Comment getCommentById(long commentId);
+    Comment getCommentById(long commentId);
 
     List<Comment> getEventComments(long eventId, String state, String end, int from, int size);
 
