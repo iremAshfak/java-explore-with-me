@@ -11,7 +11,6 @@ public record CommentUpdateDto(
         String text,
         String created,
         Long commenterId,
-        @NotNull
         Long eventId,
         LocalDateTime updatedAt,
         Long updatedById
