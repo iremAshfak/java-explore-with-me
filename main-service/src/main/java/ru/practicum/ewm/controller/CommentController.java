@@ -19,10 +19,7 @@ import ru.practicum.ewm.mapper.CommentMapper;
 import ru.practicum.ewm.service.CommentService;
 import java.util.List;
 
-import static ru.practicum.ewm.controller.URIConstants.COMMENTS_ID_PARAM;
-import static ru.practicum.ewm.controller.URIConstants.COMMENTS_URI;
-import static ru.practicum.ewm.controller.URIConstants.EVENTS_URI;
-import static ru.practicum.ewm.controller.URIConstants.EVENT_ID_PARAM;
+import static ru.practicum.ewm.controller.URIConstants.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -36,10 +33,11 @@ public class CommentController {
         return mapper.toResponse(service.createComment(createDto));
     }
 
-    @PatchMapping(COMMENTS_URI + COMMENTS_ID_PARAM)
-    public CommentResponseDto patchCommentByUser(@PathVariable long commentId,
+    @PatchMapping(USERS_URI + USER_ID_PARAM + COMMENTS_URI + COMMENTS_ID_PARAM)
+    public CommentResponseDto patchCommentByUser(@PathVariable long userId,
+                                                 @PathVariable long commentId,
                                                  @RequestBody @Valid CommentUpdateDto updateDto) {
-        return mapper.toResponse(service.patchCommentByUser(commentId, updateDto));
+        return mapper.toResponse(service.patchCommentByUser(userId, commentId, updateDto));
     }
 
     @GetMapping(COMMENTS_URI + COMMENTS_ID_PARAM)

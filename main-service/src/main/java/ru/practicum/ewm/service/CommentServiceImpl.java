@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import ru.practicum.ewm.dto.create.CommentCreateDto;
+import ru.practicum.ewm.dto.response.CommentResponseDto;
 import ru.practicum.ewm.dto.update.CommentUpdateDto;
 import ru.practicum.ewm.entity.Comment;
 import ru.practicum.ewm.entity.Event;
@@ -12,6 +13,7 @@ import ru.practicum.ewm.exception.NotFoundException;
 import ru.practicum.ewm.mapper.CommentMapper;
 import ru.practicum.ewm.repository.CommentRepository;
 
+import java.nio.file.AccessDeniedException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -39,10 +41,14 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public Comment patchCommentByUser(long id, CommentUpdateDto updateDto) {
-        Comment comment = getCommentById(id);
-        comment = mapper.toEntity(updateDto, comment);
-        return repository.save(comment);
+    public Comment patchCommentByUser(long userId, long commentId, CommentUpdateDto updateDto) {
+        checkUser(userId);
+        Comment oldVersion = getCommentById(commentId);
+        if (oldVersion.getCommenter().getId() != userId) {
+            throw new NotFoundException("Пользователь с id " + userId + " не является автором комментария");
+        }
+        Comment updatedComment = mapper.toEntity(updateDto, oldVersion);
+        return repository.save(updatedComment);
     }
 
     @Override
@@ -68,4 +74,9 @@ public class CommentServiceImpl implements CommentService {
     public void deleteComment(long id) {
         repository.deleteById(id);
     }
+
+    private User checkUser(Long userId) {
+        return userService.getUserById(userId);
+    }
+
 }

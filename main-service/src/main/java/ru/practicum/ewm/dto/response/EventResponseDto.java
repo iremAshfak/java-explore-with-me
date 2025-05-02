@@ -1,8 +1,10 @@
 package ru.practicum.ewm.dto.response;
 
 import ru.practicum.ewm.dto.info.UserInfoDto;
+import ru.practicum.ewm.entity.Comment;
 import ru.practicum.ewm.entity.EventState;
 import ru.practicum.ewm.entity.Location;
+import java.util.Set;
 
 public record EventResponseDto(
         long id,
@@ -20,6 +22,7 @@ public record EventResponseDto(
         String createdOn,
         String publishedOn,
         Location location,
-        boolean requestModeration
+        boolean requestModeration,
+        Set<Comment> longComments
 ){
 }

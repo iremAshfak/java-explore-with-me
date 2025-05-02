@@ -9,7 +9,7 @@ public interface CommentService {
 
     Comment createComment(CommentCreateDto createDto);
 
-    Comment patchCommentByUser(long commentId, CommentUpdateDto updateDto);
+    Comment patchCommentByUser(long userId, long commentId, CommentUpdateDto updateDto);
 
     ru.practicum.ewm.entity.Comment getCommentById(long commentId);
 
