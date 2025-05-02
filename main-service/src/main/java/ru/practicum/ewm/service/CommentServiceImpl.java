@@ -39,14 +39,10 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public Comment patchCommentByUser(long userId, long commentId, CommentUpdateDto updateDto) {
-        checkUser(userId);
-        Comment oldVersion = getCommentById(commentId);
-        if (oldVersion.getCommenter().getId() != userId) {
-            throw new NotFoundException("Пользователь с id " + userId + " не является автором комментария");
-        }
-        Comment updatedComment = mapper.toEntity(updateDto, oldVersion);
-        return repository.save(updatedComment);
+    public Comment patchCommentByUser(long id, CommentUpdateDto updateDto) {
+        Comment comment = getCommentById(id);
+        comment = mapper.toEntity(updateDto, comment);
+        return repository.save(comment);
     }
 
     @Override
@@ -72,9 +68,4 @@ public class CommentServiceImpl implements CommentService {
     public void deleteComment(long id) {
         repository.deleteById(id);
     }
-
-    private User checkUser(Long userId) {
-        return userService.getUserById(userId);
-    }
-
 }
