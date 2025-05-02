@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS event (
     annotation VARCHAR,
     category_id BIGINT,
     confirmed_requests INTEGER,
-    created_on TIMESTAMP WITHOUT TIME ZONE,
+    created_on TIMESTAMP WITHOUT TIME ZONE NOT NULL,
     description VARCHAR,
     event_date TIMESTAMP WITHOUT TIME ZONE,
     initiator_id BIGINT,
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS event (
     participant_limit INTEGER,
     published_on TIMESTAMP WITHOUT TIME ZONE,
     request_moderation BOOLEAN,
-    state VARCHAR,
+    state VARCHAR NOT NULL,
     title VARCHAR,
     views INTEGER
 );
