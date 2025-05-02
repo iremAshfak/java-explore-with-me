@@ -8,7 +8,6 @@ public record CompilationUpdateDto(
         Boolean pinned,
         @Size(min = 1, max = 50)
         String title,
-        Set<Long> events,
-
+        Set<Long> events
 ) {
 }
