@@ -3,7 +3,6 @@ package ru.practicum.ewm.dto.response;
 import ru.practicum.ewm.dto.info.UserInfoDto;
 import ru.practicum.ewm.entity.EventState;
 import ru.practicum.ewm.entity.Location;
-import java.util.Set;
 
 public record EventResponseDto(
         long id,
