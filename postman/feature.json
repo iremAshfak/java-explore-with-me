@@ -13,7 +13,7 @@
           "listen": "test",
           "script": {
             "exec": [
-              "pm.test(\"Ответ должен содержать код статуса 201 и даные в формате json\", function(){\r",
+              "pm.test(\"Ответ должен содержать код статуса 201 и данные в формате json\", function(){\r",
               "    pm.expect(pm.response.code).to.equal(201); \r",
               "    pm.response.to.be.withBody;\r",
               "    pm.response.to.be.json;\r",
@@ -66,7 +66,7 @@
           "listen": "test",
           "script": {
             "exec": [
-              "pm.test(\"Ответ должен содержать код статуса 201 и даные в формате json\", function(){\r",
+              "pm.test(\"Ответ должен содержать код статуса 201 и данные в формате json\", function(){\r",
               "    pm.expect(pm.response.code).to.equal(201); \r",
               "    pm.response.to.be.withBody;\r",
               "    pm.response.to.be.json;\r",
@@ -118,7 +118,7 @@
           "listen": "test",
           "script": {
             "exec": [
-              "pm.test(\"Ответ должен содержать код статуса 201 и даные в формате json\", function(){\r",
+              "pm.test(\"Ответ должен содержать код статуса 201 и данные в формате json\", function(){\r",
               "    pm.expect(pm.response.code).to.equal(201); \r",
               "    pm.response.to.be.withBody;\r",
               "    pm.response.to.be.json;\r",
@@ -152,7 +152,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"annotation\": \"Вы откроете новые возможности своего тела в приятной атмосфере на закате\",\r\n  \"eventDate\": \"2025-05-01 13:15:02\",\r\n  \"location\": {\r\n    \"lat\": 8.2118,\r\n    \"lon\": 115.0657\r\n  },\r\n  \"paid\": true,\r\n  \"participantLimit\": 10,\r\n  \"requestModeration\": false,\r\n  \"title\": \"Фитнес\"\r\n}",
+          "raw": "{\r\n  \"annotation\": \"Мастер-класс «Растяжка на открытом воздухе».\",\r\n  \"category\": 1,\r\n  \"description\": \"Вы откроете новые возможности своего тела в приятной атмосфере на закате.\",\r\n  \"eventDate\": \"2025-05-01 18:00:00\",\r\n  \"location\": {\r\n    \"lat\": 8.2118,\r\n    \"lon\": 115.0657\r\n  },\r\n  \"paid\": true,\r\n  \"participantLimit\": 6,\r\n  \"requestModeration\": false,\r\n  \"title\": \"Спортивные мастер-классы\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -182,7 +182,7 @@
           "listen": "test",
           "script": {
             "exec": [
-              "pm.test(\"Ответ должен содержать код статуса 201 и даные в формате json\", function(){\r",
+              "pm.test(\"Ответ должен содержать код статуса 201 и данные в формате json\", function(){\r",
               "    pm.expect(pm.response.code).to.equal(201); \r",
               "    pm.response.to.be.withBody;\r",
               "    pm.response.to.be.json;\r",
@@ -233,7 +233,7 @@
           "listen": "test",
           "script": {
             "exec": [
-              "pm.test(\"Ответ должен содержать код статуса 200 и даные в формате json\", function(){\r",
+              "pm.test(\"Ответ должен содержать код статуса 200 и данные в формате json\", function(){\r",
               "    pm.response.to.be.ok; \r",
               "    pm.response.to.be.withBody;\r",
               "    pm.response.to.be.json;\r",
