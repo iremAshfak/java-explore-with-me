@@ -6,7 +6,6 @@ import org.hibernate.validator.constraints.Length;
 import java.util.Set;
 
 public record CompilationCreateDto(
-        long id,
         Boolean pinned,
         @NotBlank
         @Length(max = 50)
