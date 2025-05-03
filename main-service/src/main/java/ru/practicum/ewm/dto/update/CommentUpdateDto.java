@@ -8,7 +8,6 @@ public record CommentUpdateDto(
         String text,
         String created,
         Long updatedById,
-        @NotNull
         Long eventId
 ) {
 }

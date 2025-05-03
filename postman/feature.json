@@ -326,6 +326,55 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Удаление комментария",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Комментарий успешно удален — статус 200 или 204\", function () {\r",
+							"    pm.expect(pm.response.code === 200 || pm.response.code === 204).to.be.true;\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080//comments/1/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"comments",
+						"1",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
