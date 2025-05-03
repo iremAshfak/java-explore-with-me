@@ -7,7 +7,8 @@ public record CommentUpdateDto(
         @NotBlank
         String text,
         String created,
-        Long commenterId,
+        Long updatedById,
+        @NotBlank
         Long eventId
 ) {
 }
