@@ -25,6 +25,4 @@ public class Comment {
     private User commenter;
     @ManyToOne
     private Event event;
-    private LocalDateTime updatedAt;
-    private User updatedBy;
 }

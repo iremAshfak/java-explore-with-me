@@ -88,6 +88,7 @@ public class EventController {
         return mapper.toResponse(service.patchEvent(eventId, eventDto));
     }
 
+
     @PatchMapping(USERS_URI + USER_ID_PARAM + EVENTS_URI + EVENT_ID_PARAM)
     public EventResponseDto updateEventByCurrentUser(@PathVariable long userId,
                                                      @PathVariable long eventId,
@@ -104,4 +105,3 @@ public class EventController {
                 .toList();
     }
 }
-
