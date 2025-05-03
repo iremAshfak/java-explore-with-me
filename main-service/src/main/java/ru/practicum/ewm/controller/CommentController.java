@@ -54,7 +54,7 @@ public class CommentController {
     }
 
     @DeleteMapping(COMMENTS_URI + COMMENTS_ID_PARAM + USERS_URI + USER_ID_PARAM)
-    public void deleteCommentByUser(@PathVariable long commentId, @PathVariable long userId) {
+    public void deleteComment(@PathVariable long commentId, @PathVariable long userId) {
         service.deleteComment(userId, commentId);
     }
 
