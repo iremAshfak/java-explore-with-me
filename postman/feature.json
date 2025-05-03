@@ -207,7 +207,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": \"1\",\r\n  \"text\": \"Круто, классно, восторг!.\",\r\n  \"commenterId\": \"1\", \r\n  \"eventId\": \"1\"\n}",
+					"raw": "{\r\n  \"id\": \"1\",\r\n  \"text\": \"Круто, классно, восторг!.\",\r\n  \"commenterId\": \"1\", \r\n  \"eventId\": \"1\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"

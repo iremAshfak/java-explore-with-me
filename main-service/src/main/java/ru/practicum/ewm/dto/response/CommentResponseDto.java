@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotBlank;
 import ru.practicum.ewm.dto.info.UserInfoDto;
 
 public record CommentResponseDto(
-        long id,
+        Long id,
         @NotBlank
         String text,
         String created,
