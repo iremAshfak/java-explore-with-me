@@ -68,3 +68,4 @@ public class RequestController {
         return mapper.toResponse(service.canceledRequest(userId, requestId));
     }
 }
+
