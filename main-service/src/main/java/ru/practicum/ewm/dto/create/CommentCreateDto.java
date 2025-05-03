@@ -6,7 +6,6 @@ public record CommentCreateDto(
         @NotBlank
         String text,
         String created,
-        @NotBlank
         Long commenterId,
         @NotBlank
         Long eventId
