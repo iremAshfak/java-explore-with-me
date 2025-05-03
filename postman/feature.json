@@ -207,7 +207,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"text\": \"Круто, классно, восторг!.\",\r\n  \"commenterId\": \"1\"\r\n, \n  \"eventId\": \"1\"\n}",
+					"raw": "{\r\n  \"text\": \"Круто, классно, восторг!.\",\r\n  \"commenterId\": \"1\", \r\n  \"eventId\": \"1\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -274,6 +274,8 @@
 					"port": "8080",
 					"path": [
 						"comments",
+						"1",
+						"users",
 						"1"
 					]
 				}
