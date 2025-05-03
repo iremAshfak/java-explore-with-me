@@ -68,9 +68,7 @@ CREATE TABLE IF NOT EXISTS comment (
     text VARCHAR,
     created_on TIMESTAMP WITHOUT TIME ZONE NOT NULL,
     commenter_id BIGINT,
-    event_id BIGINT,
-    updated_at TIMESTAMP WITHOUT TIME ZONE,
-    updated_by BIGINT NOT NULL
+    event_id BIGINT
 );
 
 ALTER TABLE event ADD FOREIGN KEY (category_id) REFERENCES category (id);
