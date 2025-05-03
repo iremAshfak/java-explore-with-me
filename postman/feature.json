@@ -191,6 +191,7 @@
 							"const target = pm.response.json();\r",
 							"\r",
 							"pm.test(\"Комментарии должны содержать поля: id, text, commenterId, eventId\", function () {\r",
+							"pm.expect(target).to.have.property('id');\r",
 							"pm.expect(target).to.have.property('text');\r",
 							"pm.expect(target).to.have.property('commenterId');\r",
 							"pm.expect(target).to.have.property('eventId');\r",
@@ -243,6 +244,7 @@
 							"const target = pm.response.json();\r",
 							"\r",
 							"pm.test(\"Комментарии должны содержать поля: id, text\", function () {\r",
+							"pm.expect(target).to.have.property('id');\r",
 							"pm.expect(target).to.have.property('text');\r",
 							"});"
 						],
@@ -299,6 +301,7 @@
 							"const target = pm.response.json();\r",
 							"\r",
 							"pm.test(\"Комментарии должны содержать поля: id, text\", function () {\r",
+							"pm.expect(target[0]).to.have.property('id');\r",
 							"pm.expect(target[0]).to.have.property('text');\r",
 							"});"
 						],

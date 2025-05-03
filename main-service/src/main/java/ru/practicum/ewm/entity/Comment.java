@@ -23,6 +23,8 @@ public class Comment {
     private LocalDateTime createdOn;
     private LocalDateTime updatedAt;
     @ManyToOne
+    private User updatedBy;
+    @ManyToOne
     private User commenter;
     @ManyToOne
     private Event event;
