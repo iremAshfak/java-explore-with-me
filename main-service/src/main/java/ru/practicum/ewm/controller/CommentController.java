@@ -33,10 +33,11 @@ public class CommentController {
         return mapper.toResponse(service.createComment(createDto));
     }
 
-    @PatchMapping(COMMENTS_URI + COMMENTS_ID_PARAM)
+    @PatchMapping(COMMENTS_URI + COMMENTS_ID_PARAM + USERS_URI + USER_ID_PARAM)
     public CommentResponseDto patchCommentByUser(@PathVariable long commentId,
+                                                 @PathVariable long userId,
                                                  @RequestBody @Valid CommentUpdateDto updateDto) {
-        return mapper.toResponse(service.patchCommentByUser(commentId, updateDto));
+        return mapper.toResponse(service.patchCommentByUser(userId, commentId, updateDto));
     }
 
     @GetMapping(COMMENTS_URI + COMMENTS_ID_PARAM)
