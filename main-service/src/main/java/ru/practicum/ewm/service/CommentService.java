@@ -15,5 +15,5 @@ public interface CommentService {
 
     List<Comment> getEventComments(long eventId, String state, String end, int from, int size);
 
-    void deleteComment(long commentId);
+    void deleteComment(long userId, long commentId);
 }

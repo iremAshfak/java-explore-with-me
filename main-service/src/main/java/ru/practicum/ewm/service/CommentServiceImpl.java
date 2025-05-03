@@ -65,7 +65,11 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public void deleteComment(long id) {
-        repository.deleteById(id);
+    public void deleteComment(long userId, long commentId) {
+        Comment comment = getCommentById(commentId);
+        if (comment.getCommenter().getId() != userId) {
+            throw new NotFoundException("This user is not an author");
+        }
+        repository.deleteById(commentId);
     }
 }

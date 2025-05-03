@@ -19,10 +19,7 @@ import ru.practicum.ewm.mapper.CommentMapper;
 import ru.practicum.ewm.service.CommentService;
 import java.util.List;
 
-import static ru.practicum.ewm.controller.URIConstants.COMMENTS_ID_PARAM;
-import static ru.practicum.ewm.controller.URIConstants.COMMENTS_URI;
-import static ru.practicum.ewm.controller.URIConstants.EVENTS_URI;
-import static ru.practicum.ewm.controller.URIConstants.EVENT_ID_PARAM;
+import static ru.practicum.ewm.controller.URIConstants.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -56,9 +53,9 @@ public class CommentController {
         return service.getEventComments(eventId, start, end, from, size).stream().map(mapper::toResponse).toList();
     }
 
-    @DeleteMapping(COMMENTS_URI + COMMENTS_ID_PARAM)
-    public void deleteComment(@PathVariable long commentId) {
-        service.deleteComment(commentId);
+    @DeleteMapping(COMMENTS_URI + COMMENTS_ID_PARAM + USERS_URI + USER_ID_PARAM)
+    public void deleteCommentByUser(@PathVariable long commentId, @PathVariable long userId) {
+        service.deleteComment(userId, commentId);
     }
 
 }
