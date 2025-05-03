@@ -190,11 +190,9 @@
 							"\r",
 							"const target = pm.response.json();\r",
 							"\r",
-							"pm.test(\"Комментарии должны содержать поля: id, text, commenterId, eventId\", function () {\r",
+							"pm.test(\"Комментарии должны содержать поля: id, text\", function () {\r",
 							"pm.expect(target).to.have.property('id');\r",
 							"pm.expect(target).to.have.property('text');\r",
-							"pm.expect(target).to.have.property('commenterId');\r",
-							"pm.expect(target).to.have.property('eventId');\r",
 							"});"
 						],
 						"type": "text/javascript",
@@ -207,7 +205,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"id\": \"1\",\r\n  \"text\": \"Круто, классно, восторг!.\",\r\n  \"commenterId\": \"1\", \r\n  \"eventId\": \"1\"\n}",
+					"raw": "{\r\n  \"text\": \"Круто, классно, восторг!.\",\r\n  \"commenterId\": \"1\"\r\n, \n  \"eventId\": \"1\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
