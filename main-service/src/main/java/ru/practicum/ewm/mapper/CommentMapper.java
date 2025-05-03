@@ -12,12 +12,10 @@ import ru.practicum.ewm.entity.Comment;
 
 @Mapper(componentModel = "spring")
 public interface CommentMapper {
-    @Mapping(target = "id", ignore = true)
     Comment toEntity(CommentCreateDto commentCreateDto);
 
     CommentResponseDto toResponse(Comment comment);
 
-    @Mapping(target = "id", ignore = true)
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
     Comment toEntity(CommentUpdateDto commentUpdateDto, @MappingTarget Comment comment);
 }
