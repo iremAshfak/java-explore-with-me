@@ -21,7 +21,6 @@ public class Comment {
     private Long id;
     private String text;
     private LocalDateTime createdOn;
-    private User updatedBy;
     @ManyToOne
     private User commenter;
     @ManyToOne
