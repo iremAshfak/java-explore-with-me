@@ -74,7 +74,7 @@
 							"\r",
 							"const target = pm.response.json();\r",
 							"\r",
-							"pm.test(\"Пользователь должен содержать поля: id, name, email\", function () {\r",
+							"pm.test(\"Категория должна содержать поля: id, name\", function () {\r",
 							"pm.expect(target).to.have.property('id');\r",
 							"pm.expect(target).to.have.property('name');\r",
 							"});"
@@ -190,9 +190,11 @@
 							"\r",
 							"const target = pm.response.json();\r",
 							"\r",
-							"pm.test(\"Комментарии должны содержать поля: id, text\", function () {\r",
+							"pm.test(\"Комментарии должны содержать поля: id, text, commenterId, eventId\", function () {\r",
 							"pm.expect(target).to.have.property('id');\r",
 							"pm.expect(target).to.have.property('text');\r",
+							"pm.expect(target).to.have.property('commenterId');\r",
+							"pm.expect(target).to.have.property('eventId');\r",
 							"});"
 						],
 						"type": "text/javascript",

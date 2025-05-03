@@ -39,8 +39,11 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public Comment patchCommentByUser(long id, CommentUpdateDto updateDto) {
+    public Comment patchCommentByUser(long userId, long id, CommentUpdateDto updateDto) {
         Comment comment = getCommentById(id);
+        if (comment.getCommenter().getId() != userId) {
+            throw new NotFoundException("This user is not an author");
+        }
         comment = mapper.toEntity(updateDto, comment);
         return repository.save(comment);
     }
