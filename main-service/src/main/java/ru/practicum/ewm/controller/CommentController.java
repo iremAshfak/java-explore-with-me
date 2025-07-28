@@ -18,7 +18,6 @@ import ru.practicum.ewm.dto.update.CommentUpdateDto;
 import ru.practicum.ewm.mapper.CommentMapper;
 import ru.practicum.ewm.service.CommentService;
 import java.util.List;
-
 import static ru.practicum.ewm.controller.URIConstants.*;
 
 @RestController
