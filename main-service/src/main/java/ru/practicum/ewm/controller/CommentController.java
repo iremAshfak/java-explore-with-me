@@ -19,12 +19,7 @@ import ru.practicum.ewm.mapper.CommentMapper;
 import ru.practicum.ewm.service.CommentService;
 import java.util.List;
 
-import static ru.practicum.ewm.controller.URIConstants.COMMENTS_ID_PARAM;
-import static ru.practicum.ewm.controller.URIConstants.COMMENTS_URI;
-import static ru.practicum.ewm.controller.URIConstants.EVENTS_URI;
-import static ru.practicum.ewm.controller.URIConstants.EVENT_ID_PARAM;
-import static ru.practicum.ewm.controller.URIConstants.USER_ID_PARAM;
-import static ru.practicum.ewm.controller.URIConstants.USERS_URI;
+import static ru.practicum.ewm.controller.URIConstants.*;
 
 @RestController
 @RequiredArgsConstructor
