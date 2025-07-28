@@ -1,10 +1,11 @@
 package ru.practicum.ewm.mapper;
 
-import org.mapstruct.*;
 import ru.practicum.ewm.dto.create.CommentCreateDto;
 import ru.practicum.ewm.dto.response.CommentResponseDto;
 import ru.practicum.ewm.dto.update.CommentUpdateDto;
 import ru.practicum.ewm.entity.Comment;
+import org.mapstruct.*;
+
 
 @Mapper(componentModel = "spring")
 public interface CommentMapper {
