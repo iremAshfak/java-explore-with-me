@@ -1,10 +1,6 @@
 package ru.practicum.ewm.mapper;
 
-import org.mapstruct.BeanMapping;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.MappingTarget;
-import org.mapstruct.NullValuePropertyMappingStrategy;
+import org.mapstruct.*;
 import ru.practicum.ewm.dto.create.CommentCreateDto;
 import ru.practicum.ewm.dto.response.CommentResponseDto;
 import ru.practicum.ewm.dto.update.CommentUpdateDto;
