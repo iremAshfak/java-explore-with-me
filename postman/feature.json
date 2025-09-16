@@ -136,8 +136,6 @@
 							"pm.expect(target).to.have.property('initiator');\r",
 							"pm.expect(target).to.have.property('description');\r",
 							"pm.expect(target).to.have.property('participantLimit');\r",
-							"pm.expect(target).to.have.property('state');\r",
-							"pm.expect(target).to.have.property('createdOn');\r",
 							"pm.expect(target).to.have.property('location');\r",
 							"pm.expect(target).to.have.property('requestModeration');\r",
 							"});"
@@ -152,7 +150,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n \"title\": \"Мастер-классы по растяжке\",\r\n \"annotation\": \"Мастер-класс «Растяжка на открытом воздухе».\",\r\n  \"category\": 1,\r\n \"paid\": true,\r\n \"eventDate\": \"2025-05-15 17:00:00\",\r\n  \"description\": \"Вы откроете новые возможности своего тела в приятной атмосфере на закате.\",\r\n  \"participantLimit\": 6,\r\n  \"location\": {\r\n    \"lat\": 8.2118,\r\n    \"lon\": 115.0657\r\n  },\r\n   \"requestModeration\": false,\r\n}",
+					"raw": "{\r\n \"title\": \"Мастер-классы по растяжке\",\r\n \"annotation\": \"Мастер-класс «Растяжка на открытом воздухе».\",\r\n  \"category\": 1,\r\n \"paid\": true,\r\n \"eventDate\": \"2025-05-15 17:00:00\",\r\n \"initiator\": 1,\r\n \"description\": \"Вы откроете новые возможности своего тела в приятной атмосфере на закате.\",\r\n  \"participantLimit\": 6,\r\n  \"location\": {\r\n    \"lat\": 8.2118,\r\n    \"lon\": 115.0657\r\n  },\r\n   \"requestModeration\": false,\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
