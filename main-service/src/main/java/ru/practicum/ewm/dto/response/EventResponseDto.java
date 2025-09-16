@@ -20,6 +20,8 @@ public record EventResponseDto(
         String createdOn,
         String publishedOn,
         Location location,
-        boolean requestModeration
+        boolean requestModeration,
+        long comments
 ){
 }
+
